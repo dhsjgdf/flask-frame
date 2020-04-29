@@ -3,9 +3,11 @@ import os
 
 from click import echo
 
-from example import create_app
+from apps import create_app
+from apps import example
 
 app = create_app('development')
+example.register_blueprint(app)
 
 
 @app.cli.command('urlmap')

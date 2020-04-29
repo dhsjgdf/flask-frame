@@ -4,8 +4,8 @@ import time
 from celery.signals import task_postrun
 from celery.utils.log import get_task_logger
 
-from example import celery, db
-from example.models import Message
+from apps import celery, db
+from apps.example.models import Message
 
 logger = get_task_logger(__name__)
 

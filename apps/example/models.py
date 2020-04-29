@@ -1,4 +1,4 @@
-from example import db
+from apps import db
 
 
 class Message(db.Model):
