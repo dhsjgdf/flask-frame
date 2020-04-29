@@ -14,6 +14,8 @@ class Config(object):
     CELERY_TIMEZONE = 'Europe/Berlin'
     BROKER_URL = 'redis://localhost:6379/0'
     CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+    CELERY_IMPORTS = ('example.tasks',)  #如果没有任何文件导入任务，此配置可以手动导入task
+    # CELERY_INCLUDE = ['example.tasks.long_task']
     CELERY_SEND_TASK_SENT_EVENT = True
 
 
